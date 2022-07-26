@@ -29,7 +29,7 @@ luafile ~/.config/nvim/plugins.lua
 source ~/.config/nvim/keybinds.vim
 au BufNewFile,BufRead *.duml set ft=yaml
 au BufNewFile,BufRead *.tmux.conf set ft=tmux
-au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+au FileType java luafile ~/.config/nvim/jdtls-conf.lua
 
 " Signify config
 set updatetime=85
