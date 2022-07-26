@@ -37,14 +37,10 @@ let g:signify_sign_show_count = 0
 let g:signify_sign_show_text = 1
 
 " Colorscheme
-let g:material_style = 'oceanic'
-colorscheme material
-
-" Nvim-LSP diagnostic colors
-" hi LspDiagnosticsDefaultHint        ctermfg=Magenta guifg=#cc32cc
-" hi LspDiagnosticsDefaultError       ctermfg=Red     guifg=#cc1624
-" hi LspDiagnosticsDefaultWarning     ctermfg=Yellow  guifg=#cc991b
-" hi LspDiagnosticsDefaultInformation ctermfg=Blue    guifg=#0c74ce
+if !exists('g:vscode')
+    let g:material_style = 'oceanic'
+    colorscheme material
+endif
 
 function! SynStack()
   if !exists("*synstack")

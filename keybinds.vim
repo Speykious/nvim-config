@@ -6,8 +6,8 @@ nnoremap <leader>i :source ~/.config/nvim/init.vim<CR>
 map <leader>$ :set termguicolors!<CR>
 
 " Barbar Buffer things
-nnoremap ` :call v:lua.tree_toggle()<CR>
-vnoremap ` :call v:lua.tree_toggle()<CR>
+nnoremap ` :lua require"nvim-tree".toggle()<CR>
+vnoremap ` :lua require"nvim-tree".toggle()<CR>
 nnoremap <leader>q :BufferClose<CR>
 vnoremap <leader>q :BufferClose<CR>
 
